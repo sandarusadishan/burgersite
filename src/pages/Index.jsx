@@ -347,9 +347,9 @@ const Footer = () => (
     <div className="container px-4 mx-auto relative z-10">
         
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-16">
             {/* Brand Column */}
-            <div className="space-y-6">
+            <div className="col-span-2 lg:col-span-1 space-y-6">
                 <Link to="/" className="flex items-center gap-3 group">
                     <div className="relative">
                         {/* Animated Glow */}
@@ -411,7 +411,7 @@ const Footer = () => (
             </div>
 
             {/* Contact Details & Social */}
-            <div>
+            <div className="col-span-2 lg:col-span-1">
                 <h4 className="text-sm font-bold text-white mb-6">Get In Touch</h4>
                 <ul className="space-y-4 mb-8">
                     <li className="flex items-start gap-3 text-sm font-medium text-gray-400">
