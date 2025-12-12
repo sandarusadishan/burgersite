@@ -90,7 +90,7 @@ const Auth = () => {
   const currentBranding = isLogin ? brandingData.login : brandingData.register;
 
   return (
-    <div className="min-h-screen w-full flex bg-[#09090b] text-white overflow-hidden relative">
+    <div className="min-h-[100dvh] w-full flex bg-[#09090b] text-white overflow-hidden relative">
       {/* Navbar Overlay */}
       <div className="absolute top-0 left-0 w-full z-50">
         <Navbar />
@@ -157,8 +157,18 @@ const Auth = () => {
         {/* PANEL 2: FORM (Mobile & Desktop) */}
         <motion.div 
            layout
-           className="w-full lg:w-1/2 flex items-center justify-center p-4 sm:p-6 bg-[#09090b] relative overflow-y-auto"
+           className="w-full lg:w-1/2 flex items-center justify-center p-4 sm:p-6 bg-[#09090b] relative overflow-y-auto pt-28 pb-10 lg:pt-0 lg:pb-0"
         >
+          {/* Mobile Background Image (Visible only on small screens) */}
+          <div className="absolute inset-0 lg:hidden z-0">
+               <img 
+                 src={currentBranding.image} 
+                 alt="Background" 
+                 className="w-full h-full object-cover opacity-20" 
+               />
+               <div className="absolute inset-0 bg-gradient-to-t from-[#09090b] via-[#09090b]/80 to-[#09090b]/40" />
+               <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
+          </div>
           {/* Ambient Glows */}
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#FFB800]/5 blur-[100px] rounded-full pointer-events-none"></div>
 

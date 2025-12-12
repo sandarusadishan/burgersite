@@ -185,8 +185,8 @@ const Navbar = () => {
               </DropdownMenu>
             ) : (
               <Link to="/auth">
-                <Button className="h-10 px-6 bg-[#FFB800] hover:bg-[#FFD600] text-black font-extrabold rounded-xl shadow-[0_0_20px_-5px_rgba(255,184,0,0.3)] hover:shadow-[0_0_30px_-5px_rgba(255,184,0,0.5)] hover:-translate-y-0.5 transition-all duration-300 text-xs tracking-wider uppercase">
-                  Join Now
+                <Button className="h-10 px-6 bg-[#FFB800] hover:bg-[#FFD600] text-black font-extrabold rounded-xl shadow-[0_0_20px_-5px_rgba(255,184,0,0.3)] hover:shadow-[0_0_30px_-5px_rgba(255,184,0,0.5)] hover:-translate-y-0.5 transition-all duration-300 text-xs tracking-wider">
+                  Login
                 </Button>
               </Link>
             )}

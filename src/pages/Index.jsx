@@ -32,18 +32,18 @@ const HeroSection = () => {
     const y2 = useTransform(scrollY, [0, 500], [0, -150]);
 
     return (
-        <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-[#050505]">
+        <section className="relative min-h-[100dvh] flex items-center pt-20 overflow-hidden bg-[#050505]">
             {/* Background Ambience */}
             <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#FFB800]/5 rounded-full blur-[120px] pointer-events-none -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none translate-y-1/2 -translate-x-1/2" />
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03]" />
 
             <div className="container relative z-10 px-4 mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     
                     {/* Text Content */}
                     <motion.div 
-                        className="space-y-8 text-center lg:text-left order-2 lg:order-1"
+                        className="space-y-6 lg:space-y-8 text-center lg:text-left order-2 lg:order-1"
                         initial="hidden"
                         animate="visible"
                         variants={staggerContainer}
@@ -99,7 +99,7 @@ const HeroSection = () => {
                         transition={{ duration: 1 }}
                         style={{ y: y2 }}
                     >
-                        <motion.div animate={floatingAnimation} className="relative z-10 w-full max-w-[500px] aspect-square">
+                        <motion.div animate={floatingAnimation} className="relative z-10 w-[85%] sm:w-[70%] lg:w-full max-w-[500px] aspect-square mx-auto">
                             {/* Glow from behind */}
                             <div className="absolute inset-0 bg-[#FFB800]/20 blur-[100px] rounded-full animate-pulse" />
                             
